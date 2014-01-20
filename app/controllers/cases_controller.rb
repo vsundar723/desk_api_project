@@ -5,7 +5,6 @@ class CasesController < ApplicationController
     if @access_token.present?
       @cases = client.case_list_by_filter(@access_token, 1850829)
       @labels = client.labels_list(@access_token)
-      # @filters = Client.filters_list(@access_token)
     else
       render '/403.html.haml'
     end

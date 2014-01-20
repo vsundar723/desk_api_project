@@ -30,7 +30,6 @@ gem 'json', '~> 1.8.1'
 gem 'pry'
 gem 'bootstrap-sass'
 gem 'rspec-rails', '~> 2.14.0'
-gem "webmock", "~> 1.17.1"
 gem 'rails_12factor', group: :production
 
 gem 'sqlite3', :group => [:development, :test]
