@@ -18,7 +18,10 @@ Each tab is a partial, _labels.html.haml, _create_label.html.haml, _cases.html.h
 cases_controller.js
 Has JS functions for making AJAX calls once a label is created.
 
+Once you create the label or created the label and applied to a case, refresh the page to see the changes.
+
 TO DO:
 1. Add RSpecs.
 2. Add JQuery validation.
 3. Messaging once form is submitted.
+4. page redirect after label is created.
