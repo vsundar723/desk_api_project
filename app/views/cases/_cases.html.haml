@@ -1,0 +1,19 @@
+%h4.text-center= 'List of Cases'
+%table.table
+	%thead
+		%tr
+			%th= 'Id'
+			%th= 'Blurb'
+			%th= 'Subject'
+			%th= 'Priority'
+			%th= 'Status'
+			%th= 'Labels'
+	%tbody
+		- cases.each do |case_study|
+			%tr
+				%td= case_study.id
+				%td= case_study.subject
+				%td= case_study.blurb
+				%td= case_study.priority
+				%td= case_study.status
+				%td= case_study.labels

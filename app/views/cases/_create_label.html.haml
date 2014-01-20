@@ -1,0 +1,29 @@
+%h4.text-center= 'Create a Label'
+%form.input-group{id: 'create-label', role: 'form', method: "get", novalidate: "novalidate"}
+  %div.form-group
+    %label= 'Name'
+    %input.form-control{id: "formName", name: "name", type: "text", placeholder: 'Enter name'}
+  %div.form-group
+    %label= 'Description'
+    %input.form-control{id: "form-desc", name: "desc", type: "text", placeholder: 'Enter description'}
+  %div.form-group
+    %label= 'Select the label types'
+    %select.form-control{id: "form-types", multiple: 'multiple'}
+      - ['case', 'macro', 'article'].each do |type|
+        %option= type
+  %div.checkbox
+    %label
+      %input{id: 'form-enabled', type: "checkbox"}= 'Enabled'
+  %div.form-group
+    %label= 'Select the color'
+    %select.form-control{id: 'form-color'}
+      - ['default', 'blue', 'white', 'yellow', 'red', 'orange', 'green', 'black', 'purple', 'brown', 'grey', 'pink'].each do |color|
+        %option= color
+  %div.form-group
+    %input.btn.btn-primary{ type: "submit", value: "Create", id: "submit" }
+  %div.form-group
+    %input.btn.btn-primary{ type: "submit", value: "Create and apply to", id: "submit-and-apply" }
+      %label= 'Select the case'
+      %select.form-control{id: 'form-case'}
+        - cases.each do |case_study|
+          %option= case_study.id

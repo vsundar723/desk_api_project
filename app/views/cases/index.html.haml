@@ -1,0 +1,20 @@
+%div.page-header
+  %h1.text-center 
+    Desk.com rails application
+    %small
+      API v2
+%div.panel.panel-default
+  %ul.nav.nav-pills.nav-stacked{id: 'actionMenu'}
+    %li.active
+      %a{href: '#cases', data: {toggle: 'tab'}}= 'Cases'
+    %li
+      %a{href: '#labels', data: {toggle: 'tab'}}= 'Labels'
+    %li
+      %a{href: '#create_label', data: {toggle: 'tab'}}= 'Create Label'
+  %div.tab-content.panel-body
+    %div.tab-pane.fade.active.in{id: 'cases'}
+      = render 'cases', cases: @cases
+    %div.tab-pane.fade{id: 'labels'}
+      = render 'labels', labels: @labels
+    %div.tab-pane.fade{id: 'create_label'}
+      = render 'create_label', cases: @cases

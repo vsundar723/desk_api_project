@@ -1,0 +1,17 @@
+%h4.text-center=  'List of labels'
+%table.table
+	%thead
+		%tr
+			%th= 'Name'
+			%th= 'Description'
+			%th= 'Enabled'
+			%th= 'Types'
+			%th= 'Color'
+	%tbody
+		- labels.each do |label|
+			%tr
+				%td= label.name
+				%td= label.description
+				%td= label.enabled
+				%td= label.types
+				%td= label.color
