@@ -24,7 +24,8 @@ function sendData($form, data, url) {
     dataType: 'json',
     async: false,
     success: function(data) {
-      if(data && ((data.status === '201 Created') || (data.status === '200 OK'))) {
+      console.log(data)
+      if(data && ((data.status == '201 Created') || (data.status == '200 OK'))) {
         $('#alert').empty().append(
           '<div class="alert alert-success alert-dismissable">' +
             '<button type="button" class="close" data-dismiss="alert">' +
